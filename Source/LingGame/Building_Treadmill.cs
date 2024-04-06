@@ -2,6 +2,4 @@ using Verse;
 
 namespace LingGame;
 
-public class Building_Treadmill : Building
-{
-}
+public class Building_Treadmill : Building;

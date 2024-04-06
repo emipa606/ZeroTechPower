@@ -6,7 +6,7 @@ namespace LingGame;
 
 public class LingLongRandPowerGiver : Building
 {
-    private readonly List<LingLongRandPowerNeeder> powerNeeders = new List<LingLongRandPowerNeeder>();
+    private readonly List<LingLongRandPowerNeeder> powerNeeders = [];
     public LingLongRandPowerNeeder powerNeeder;
 
     public int UseInt = -1;
@@ -21,12 +21,11 @@ public class LingLongRandPowerGiver : Building
         var inspectString = base.GetInspectString();
         if (powerNeeder != null)
         {
-            return string.Concat(new[]
-            {
+            return string.Concat([
                 inspectString,
                 "\n",
                 string.Concat("LinkNeederID".Translate(), powerNeeder.thingIDNumber.ToString())
-            });
+            ]);
         }
 
         return base.GetInspectString();

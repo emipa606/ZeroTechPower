@@ -44,7 +44,7 @@ public class JobDriver_RunInTreadmill : JobDriver
         work.FailOnCannotTouch(TargetIndex.A, PathEndMode.InteractionCell);
         work.WithEffect(ZeroTechPowerDefOf.BrainBlood, TargetIndex.A);
         work.defaultCompleteMode = ToilCompleteMode.Delay;
-        work.defaultDuration = 4000;
+        work.defaultDuration = JobEndInterval;
         yield return work;
     }
 }
